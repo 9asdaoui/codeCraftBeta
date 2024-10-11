@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/*** Import Fonts ***/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+/*** Variables ***/
+/* -------------------------------- 
+		General Style
+-------------------------------- */
+html,
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300000;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+h2 {
+  font-size: 100px;
+  position: relative;
+  color: #5b85c0;
+  background-image: -webkit-linear-gradient(90deg, #000000 10%, #235347 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 60s infinite linear;
+}
+h4 {
+  font-size: large;
+  background-image: -webkit-linear-gradient(90deg, #3c423e 10%, #235347 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+p.intro-des {
+  position: relative;
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 50px;
+}
+p.intro-des a {
+  color: #3c3c3c;
+}
+p.intro-des span {
+  font-size: 15px;
+}
+
+.button-row-container {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*** Navbar ***/
+.navbar-container {
+  position: fixed;
+  top: 3%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 50%;
+  height: 60px;
+  background:linear-gradient(90deg, #190606 , #520128 ); ;
+  border: 2px solid rgb(201, 83, 83);
+ border-radius: 30px;
+  
+}
+
+.nav,
+.navbar {
+  width: 250px;
+  margin: auto;
+  margin-top: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 4000;
+  letter-spacing: 1px;
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.nav a,
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav .nav-item,
+.navbar .nav-item {
+  padding: 5px 0;
+}
+.nav .nav-item:after,
+.navbar .nav-item:after {
+  content: " ";
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  top: 3px;
+  background: transparent;
+  transition: top 0.3s ease-out;
+  -webkit-transition: top 0.3s ease-out;
+}
+.nav .nav-item:hover:after,
+.navbar .nav-item:hover:after {
+  top: 7px;
+  background: #3c3c3c;
+}
+
+.active:after {
+  height: 2px !important;
+  background: #ff1900 !important;
+}
+
+section.page-container {
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  height: 120vh;
+  position: relative;
+  text-align: center;
+}
+
+#intro {
+  max-width: 800px;
+}
+#intro .section-container {
+  margin-top: 70px;
+}
+
+.section-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.section-container h4 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #3c3c3c;
+  margin-bottom: 30px;
+}
+
+/*** General Button Styles ***/
+.button-container {
+  display: inline-block;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 45px;
+  width: 200px;
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.button-container .flipper {
+  transition: all 0.5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.button-container .button {
+  height: 45px;
+  width: 200px;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: Z;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
+  box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
+}
+.button-container .button i.fa {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin: auto;
+  text-shadow: 0.5px 1px 2px #3c3c3c;
+}
+.button-container .button.front {
+  z-index: 10;
+}
+.button-container .button.back {
+  color: rgba(210, 119, 119, 0.644);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+
+/* -------------------------------- 
+			Water Fill
+-------------------------------- */
+/*** Water Fill ***/
+.button-water-fill .button {
+  background-position: 0 -50%;
+  background: #e3949449;
+  transition: background-position 0.75s ease;
+}
+.button-water-fill .button:hover {
+  background-position: 100% 60%;
+  color: rgb(118, 29, 29) !important;
+}
+.button-water-fill.wave-black .button {
+  color: black;
+  background-image: url("https://s32.postimg.org/g5kiaqxit/wave_black.png");
+}
