@@ -10,16 +10,25 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300000;
   background:wheat;
+  margin: 0%;
+  
+
 }
 
 h2 {
-  font-size: 100px;
+  font-size: 50px;
   position: relative;
   color: #5b85c0;
   background-image: -webkit-linear-gradient(90deg, #ad6d6d 10%, #235347 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 60s infinite linear;
+  width: 75%;
+  position: absolute;
+  top: -170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 h4 {
   font-size: large;
