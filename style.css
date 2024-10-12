@@ -8,9 +8,9 @@
 html,
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 300000;
   background:wheat;
   margin: 0%;
+  font-size: large;
   
 
 }
@@ -35,6 +35,7 @@ h4 {
   background-image: -webkit-linear-gradient(90deg, #3c423e 10%, #235347 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 
 }
 p.intro-des {
@@ -64,7 +65,7 @@ p.intro-des span {
 /*** Navbar ***/
 .navbar-container {
   position: fixed;
-  top: 3%;
+  top: 10%;
   left: 50%;
   margin-right: 50%;
   transform: translateX(-50%);
@@ -78,23 +79,21 @@ p.intro-des span {
 
 .nav,
 .navbar {
-  width: 250px;
+  width: 400px;
   margin: auto;
   margin-top: 20px;
   font-family: "Lato", sans-serif;
-  font-size: 15px;
-  font-weight: 4000;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: 1px;
   list-style: none;
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
 .nav a,
 .navbar a {
-  color: #151212;
+  color:rgba(255, 255, 255, 0.666);
   text-decoration: none;
 }
 .nav .nav-item,
@@ -143,15 +142,14 @@ section.page-container {
 
 .section-container {
   position: absolute;
-  top: 45%;
+  top: 55%;
   left: 50%;
-  width: 90%;
+  width: 100%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 .section-container h4 {
   font-size: 50px;
-  font-weight: 300;
   color: #3c3c3c;
   margin-bottom: 30px;
 }
@@ -168,6 +166,7 @@ section.page-container {
   -webkit-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
+  background: #3c3c3c30;
 }
 .button-container .flipper {
   transition: all 0.5s ease-in-out;
